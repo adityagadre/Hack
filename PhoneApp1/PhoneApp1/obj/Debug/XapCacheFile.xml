@@ -1,15 +1,21 @@
-﻿<xapCache source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Bin\Debug\PhoneApp1_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2/1/2014 3:00:14 AM">
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.dll" archivePath="PhoneApp1.dll" lastWriteTime="2/1/2014 3:00:14 AM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Scripts\json2.js" archivePath="Scripts\json2.js" lastWriteTime="2/1/2014 12:20:10 AM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Scripts\json2.min.js" archivePath="Scripts\json2.min.js" lastWriteTime="2/1/2014 12:20:10 AM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2/1/2014 1:19:07 AM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="1/31/2014 4:21:01 PM" />
-  <file source="D:\Hack\Hack\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="2/1/2014 12:36:05 AM" />
-  <file source="D:\Hack\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/31/2014 4:21:14 PM" />
+﻿<xapCache source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\PhoneApp1_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2/1/2014 4:03:30 AM">
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.dll" archivePath="PhoneApp1.dll" lastWriteTime="2/1/2014 4:03:29 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Scripts\json2.js" archivePath="Scripts\json2.js" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Scripts\json2.min.js" archivePath="Scripts\json2.min.js" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2/1/2014 3:30:27 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="2/1/2014 3:28:40 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2/1/2014 3:28:42 AM" />
+  <file source="C:\Users\admin\Documents\GitHub\Hack\PhoneApp1\PhoneApp1\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2/1/2014 3:28:42 AM" />
 </xapCache>
