@@ -56,21 +56,44 @@ namespace PhoneApp1
 			// Sample code to localize the ApplicationBar
 			//BuildLocalizedApplicationBar();
 		}
+
+
+        String proc(String s,JValue c)
+        {
+
+            if(c!=null)
+            if (s == "")
+            {
+                s += c.Value.ToString();
+            }
+            else
+            {
+                s += ", " + c.Value.ToString();
+            }
+            return s;
+        }
+
 		String json;
+        String searchString;
 		void handler(object sender, DownloadStringCompletedEventArgs e)
 		{
-			txta.Text = "abc2";
-			txta.Text = e.Result;
 			json=e.Result;
 			String s="";
-
+            
 			JObject j = JObject.Parse(json);
 			JArray gr = (JArray)j["@graph"];
 
 			int i;
+            List<String> l=new List<String>();
+            
+            
+
+
 			for (i = 0; i < gr.Count; i++)
 			{
+                s = "";
 				JObject a = (JObject)gr[i];
+
 				JObject b = (JObject)a["s:address"];
                 JValue c = null;
                 if (b == null)
@@ -81,16 +104,44 @@ namespace PhoneApp1
                 {
                     c = (JValue)b["s:addressLocality"];
                 }
-                if(c!=null)
-                { 
-				    s += "," + c.Value.ToString();
+
+                //
+                c = (JValue)a["s:streetAddress"];
+
+                s=proc(s, c);
+
+
+                b = (JObject)a["s:address"];
+                if(b==null)
+                {
+                    b = a;
                 }
+
+                c = (JValue)b["s:addressLocality"];
+                s = proc(s, c);
+
+                c = (JValue)b["s:addressSubregion"];
+                s = proc(s, c);
+
+                c = (JValue)b["s:addressRegion"];
+                s = proc(s, c);
+
+                c = (JValue)b["s:addressCountry"];
+                s = proc(s, c);
+
+                if(s.ToLower().IndexOf(searchString.ToLower())!=-1)
+                {
+                    l.Add(s);
+                }
+
 			}
 			
-			txta.Text = s;
+            autoCompleteBox1.ItemsSource = l;
 
 
+            //autoCompleteBox1.ItemsSource
 
+            
 
 			/*
 			RootObject root = JsonConvert.DeserializeObject<RootObject>(e.Result);
@@ -111,12 +162,10 @@ namespace PhoneApp1
 
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
-			txta.Text = "abc";
 			WebClient w = new WebClient();
 			w.DownloadStringAsync(new Uri("http://platform.bing.com/geo/autosuggest/v1/?umv=47.219192,-123.605026,28.612973,-81.505417&mr=10&ul=34.038196,-118.278534,100&q=Pasadena"),null);
 			
 			w.DownloadStringCompleted+=new DownloadStringCompletedEventHandler(handler);
-			txta.Text = "abc1";
 			
 		}
 
@@ -124,6 +173,20 @@ namespace PhoneApp1
 		{
 
 		}
+
+        private void autoCompleteBox1_TextChanged(object sender, RoutedEventArgs e)
+        {
+            searchString = autoCompleteBox1.Text;
+            if (autoCompleteBox1.Text == "")
+                return;
+            WebClient w = new WebClient();
+            
+            String q=System.Net.HttpUtility.UrlEncode(autoCompleteBox1.Text);
+            w.DownloadStringCompleted += new DownloadStringCompletedEventHandler(handler);
+            w.DownloadStringAsync(new Uri("http://platform.bing.com/geo/autosuggest/v1/?umv=47.219192,-123.605026,28.612973,-81.505417&mr=10&ul=34.038196,-118.278534,100&q="+q),autoCompleteBox1.Text);
+           
+            
+        }
 
 		// Sample code for building a localized ApplicationBar
 		//private void BuildLocalizedApplicationBar()

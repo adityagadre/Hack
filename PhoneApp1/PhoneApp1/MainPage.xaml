@@ -6,14 +6,19 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:PhoneApp1"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
-
+    shell:SystemTray.IsVisible="True" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+    <phone:PhoneApplicationPage.Resources>
+        <local:SampleWords
+        x:Key="AutoCompletions" />
+    </phone:PhoneApplicationPage.Resources>
     <!--LayoutRoot is the root grid where all page content is placed-->
+    
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -47,11 +52,14 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-			<TextBox x:Name="txta" HorizontalAlignment="Left" Height="72" Margin="10,10,-10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="456" TextChanged="txta_TextChanged"/>
-
+			
 		</Grid>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="224,355,0,0" Grid.Row="1" VerticalAlignment="Top" Height="126" Width="201" Click="Button_Click_1"/>
-
+        <Grid x:Name="ContentPanel1" Grid.Row="1" Margin="12,0,12,0">
+            <toolkit:AutoCompleteBox HorizontalAlignment="Left"  Width="450" Grid.Row="0"                                    
+                                     Name="autoCompleteBox1" VerticalAlignment="Top"
+                                     ItemsSource="{StaticResource AutoCompletions}" TextChanged="autoCompleteBox1_TextChanged"/>
+        </Grid>
 		<!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to
             account for the System Tray. Set this to 0 (or remove the margin altogether)
