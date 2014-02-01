@@ -23,7 +23,7 @@ namespace PhoneApp1
 			//BuildLocalizedApplicationBar();
 		}
 		String json;
-		void handler(object a, DownloadStringCompletedEventArgs e)
+		void handler(object sender, DownloadStringCompletedEventArgs e)
 		{
 			txta.Text = "abc2";
 			txta.Text = e.Result;
@@ -31,7 +31,15 @@ namespace PhoneApp1
 			String s;
 
 			JObject j = JObject.Parse(json);
-			JObject gr = (JObject)j["@graph"];
+			JArray gr = (JArray)j["@graph"];
+
+			JObject a = (JObject)gr[0];
+			JObject b = (JObject)a["s:address"];
+			JObject c = (JObject)b["s:addressLocality"];
+			txta.Text = c;
+
+
+
 
 			/*
 			RootObject root = JsonConvert.DeserializeObject<RootObject>(e.Result);
