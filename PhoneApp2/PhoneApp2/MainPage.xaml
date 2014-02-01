@@ -62,7 +62,7 @@
     VerticalAlignment="Top"
     Margin="0,80,0,0"
     Content="Query"
-    Visibility="Collapsed" Click="queryButton_Click" />
+    Visibility="Collapsed" Click="OnQueryButtonClick" />
 
     </Grid>
 

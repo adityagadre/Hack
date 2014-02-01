@@ -24,21 +24,19 @@ namespace PhoneApp2
 
         private void OnSessionStateChanged(object sender, Facebook.Client.Controls.SessionStateChangedEventArgs e)
         {
-            //this.ContentPanel.Visibility = (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened) ?
-              //                  Visibility.Visible : Visibility.Collapsed;
+            /*this.ContentPanel.Visibility = (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened) ?
+                                Visibility.Visible : Visibility.Collapsed;*/
             if (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened)
             {
                 this.queryButton.Visibility = Visibility.Visible;
-                this.multiQueryButton.Visibility = Visibility.Visible;
             }
             else if (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Closed)
             {
                 this.queryButton.Visibility = Visibility.Collapsed;
-                this.multiQueryButton.Visibility = Visibility.Collapsed;
-            }
+            }            
         }
 
-        private async void queryButton_Click(object sender, RoutedEventArgs e)
+        private async void OnQueryButtonClick(object sender, RoutedEventArgs e)
         {
             var fb = new Facebook.FacebookClient(this.loginButton.CurrentSession.AccessToken);
             var result = await fb.GetTaskAsync("fql",
