@@ -25,7 +25,7 @@ namespace PhoneApp1
 		void handler(object a, DownloadStringCompletedEventArgs e)
 		{
 			txta.Text = "abc2";
-			json=e.Result;
+			txta.Text = e.Result;
 
 		}
 
