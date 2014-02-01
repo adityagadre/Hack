@@ -28,15 +28,21 @@ namespace PhoneApp1
 			txta.Text = "abc2";
 			txta.Text = e.Result;
 			json=e.Result;
-			String s;
+			String s="";
 
 			JObject j = JObject.Parse(json);
 			JArray gr = (JArray)j["@graph"];
 
-			JObject a = (JObject)gr[0];
-			JObject b = (JObject)a["s:address"];
-			JObject c = (JObject)b["s:addressLocality"];
-			txta.Text = c;
+			int i;
+			for (i = 0; i < gr.Count; i++)
+			{
+				JObject a = (JObject)gr[i];
+				JObject b = (JObject)a["s:address"];
+				JValue c = (JValue)b["s:addressLocality"];
+				s += "," + c.Value.ToString();
+			}
+			
+			txta.Text = s;
 
 
 
