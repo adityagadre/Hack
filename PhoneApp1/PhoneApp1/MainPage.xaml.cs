@@ -166,10 +166,15 @@ namespace PhoneApp1
 
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
-			WebClient w = new WebClient();
-			w.DownloadStringAsync(new Uri("http://platform.bing.com/geo/autosuggest/v1/?umv=47.219192,-123.605026,28.612973,-81.505417&mr=10&ul=34.038196,-118.278534,100&q=" + ),null);
-			
-			w.DownloadStringCompleted+=new DownloadStringCompletedEventHandler(handler);
+            searchString = autoCompleteBox1.Text;
+            if (autoCompleteBox1.Text == "")
+                return;
+            WebClient w = new WebClient();
+
+            String q = System.Net.HttpUtility.UrlEncode(autoCompleteBox1.Text);
+            w.DownloadStringCompleted += new DownloadStringCompletedEventHandler(handler1);
+            w.DownloadStringAsync(new Uri("http://platform.bing.com/geo/autosuggest/v1/?umv=47.219192,-123.605026,28.612973,-81.505417&mr=10&ul=34.038196,-118.278534,100&q=" + q), autoCompleteBox1.Text);
+           
 			
 		}
 
@@ -186,7 +191,7 @@ namespace PhoneApp1
             WebClient w = new WebClient();
             
             String q=System.Net.HttpUtility.UrlEncode(autoCompleteBox1.Text);
-            w.DownloadStringCompleted += new DownloadStringCompletedEventHandler(handler1);
+            w.DownloadStringCompleted += new DownloadStringCompletedEventHandler(handler);
             w.DownloadStringAsync(new Uri("http://platform.bing.com/geo/autosuggest/v1/?umv=47.219192,-123.605026,28.612973,-81.505417&mr=10&ul=34.038196,-118.278534,100&q=" + q), autoCompleteBox1.Text);
            
 
