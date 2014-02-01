@@ -162,6 +162,20 @@ namespace PhoneApp1
         void handler1(object sender, DownloadStringCompletedEventArgs e)
         {
             json = e.Result;
+
+            String s = "";
+
+            JObject j = JObject.Parse(json);
+            JArray gr = (JArray)j["@graph"];
+
+            int i;
+            s = "";
+            JObject a = (JObject)gr[0];
+            JObject jo = (JObject)a["s:geo"];
+            JValue lat = (JValue)jo["s:latitude"];
+            JValue lon = (JValue)jo["s:s:longitude"];
+
+
         }
 
 		private void Button_Click_1(object sender, RoutedEventArgs e)
