@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PhoneApp1.Resources;
+using Newtonsoft.Json.Linq;
 
 namespace PhoneApp1
 {
@@ -26,6 +27,25 @@ namespace PhoneApp1
 		{
 			txta.Text = "abc2";
 			txta.Text = e.Result;
+			json=e.Result;
+			String s;
+
+			JObject j = JObject.Parse(json);
+			JObject gr = (JObject)j["@graph"];
+
+			/*
+			RootObject root = JsonConvert.DeserializeObject<RootObject>(e.Result);
+			JObject obj = root.response.ScoreDetail;
+			foreach (KeyValuePair<string, JToken> pair in obj)
+			{
+				string key = pair.Key; // here you got 39.
+				foreach (JObject detail in pair.Value as JArray)
+				{
+					string date = detail["test_date"].ToString();
+					string score = detail["score"].ToString();
+					string total_marks = detail["total_marks"].ToString();
+				}
+			}*/
 
 		}
 
