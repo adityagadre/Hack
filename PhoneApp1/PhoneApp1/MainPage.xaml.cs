@@ -24,6 +24,7 @@ namespace PhoneApp1
 		String json;
 		void handler(object a, DownloadStringCompletedEventArgs e)
 		{
+			txta.Text = "abc2";
 			json=e.Result;
 
 		}
@@ -36,7 +37,7 @@ namespace PhoneApp1
 			w.DownloadStringAsync(new Uri("http://platform.bing.com/geo/autosuggest/v1/?umv=47.219192,-123.605026,28.612973,-81.505417&mr=10&ul=34.038196,-118.278534,100&q=Pasadena"),null);
 			
 			w.DownloadStringCompleted+=new DownloadStringCompletedEventHandler(handler);
-
+			txta.Text = "abc1";
 			
 		}
 
